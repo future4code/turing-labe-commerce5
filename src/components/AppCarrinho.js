@@ -1,9 +1,9 @@
 import React from "react";
-import "./index.css";
-import  CardVideo  from "./components/CardVideo";
-import  Filtro  from "./components/Filtro";
-import { Header } from "./components/Header";
-import Carrinho from "./components/Carrinho";
+import "../index.css";
+import  CardVideo  from "./CardVideo";
+import  Filtro  from "./Filtro";
+import { Header } from "./Header";
+import Carrinho from "./Carrinho";
 import styled from "styled-components";
 
 const Div = styled.div`

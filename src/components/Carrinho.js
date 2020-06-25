@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import AppCarrinho from "./AppCarrinho";
-import App from "../App"
+// import AppCarrinho from "./AppCarrinho";
+// import App from "../App"
 
 const Car = styled.div`
 display: flex;
@@ -24,13 +24,18 @@ const Imagem = styled.img`
 width: 50%;
 height: 45%;
 `
+
+
 class Carrinho extends React.Component {
-    render(){
-        return(
+    handleClickCarrinho = () => {
+        this.setState({ login: !this.state.login });
+    };
+    render() {
+        return (
             <Car>
-                <Imagem onClick={this.handleClickCarrinho} src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png"/>
+                <Imagem onClick={this.handleClickCarrinho} src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
             </Car>
         )
-}
+    }
 }
 export default Carrinho
