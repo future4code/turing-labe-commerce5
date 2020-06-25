@@ -26,7 +26,7 @@ border: 2px solid #021729;
 `;
 
 
-class App extends React.Component{
+class Home extends React.Component{
   render(){
     return (
       <Div>
@@ -79,4 +79,5 @@ class App extends React.Component{
     );
   }  
 }
-export default App
+export default Home
+
