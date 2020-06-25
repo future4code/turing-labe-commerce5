@@ -15,7 +15,7 @@ const Titulo = styled.h4`
  margin-left: 20px;
  color: #170229;
 `
-class CardVideo extends React.Component {
+class Produtos extends React.Component {
   reproduzVideo = () => {
     console.log("Vídeo está sendo reproduzido");
 };
@@ -32,4 +32,4 @@ class CardVideo extends React.Component {
     );
   }
 }
-export default CardVideo
+export default Produtos

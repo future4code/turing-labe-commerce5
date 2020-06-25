@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AppCarrinho from "./AppCarrinho";
-import App from "../App"
+
 
 const Car = styled.div`
 display: flex;
@@ -25,10 +24,10 @@ width: 50%;
 height: 45%;
 `
 class Carrinho extends React.Component {
-    render(){
+       render(){
         return(
-            <Car>
-                <Imagem onClick={this.handleClickCarrinho} src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png"/>
+            <Car onClick={this.handleClickCarrinho}>
+                <Imagem src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png"/>
             </Car>
         )
 }
