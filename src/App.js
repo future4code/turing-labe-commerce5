@@ -1,12 +1,9 @@
 import React from "react";
 import "./index.css";
-// import  CardVideo  from "./components/CardVideo";
-// import  Filtro  from "./components/Filtro";
-// import { Header } from "./components/Header";
-// import Carrinho from "./components/Carrinho";
 import styled from "styled-components";
-import AppCarrinho from "./components/AppCarrinho"
-import Home from "./components/Home"
+import AppCarrinho from "./components/AppCarrinho";
+import Home from "./components/Home";
+
 
 const TelaInicial = styled.div`
 margin:0;
@@ -109,23 +106,33 @@ height: 45%;
 `
 
 
-class App extends React.Component {
+class App extends React.Component{
   state = {
-    Compras: false
+    Carrinho: false
   };
 
   handleClickCarrinho = () => {
-    this.setState({ Compras: !this.state.Compras });
+    this.setState({ Carrinho: !this.state.Carrinho });
 };
-  render() {
-    const renderiza = this.state.Compras ? <AppCarrinho /> : <Home />;
-    return <TelaInicial>{renderiza}
-      <Car onClick={this.handleClickCarrinho}>
-        <Imagem src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
-      </Car>
-      </TelaInicial>
-  };
+ 
+ 
+    render() {
+      const renderiza = () => {
+        if (!this.state.Carrinho) {
+          return (
+            <AppCarrinho
+              funcao={this.handleClickCarrinho}
+            />
+          );
+        } else {
+          return <Home/>;
+        }
+      };
+  
+      return <Home>{renderiza()}</Home>;
+    }
+  }
 
-}
 
 export default App
+

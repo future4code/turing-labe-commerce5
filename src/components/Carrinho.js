@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import AppCarrinho from "./AppCarrinho";
-// import App from "../App"
+
 
 const Car = styled.div`
 display: flex;
@@ -27,6 +26,7 @@ height: 45%;
 
 
 class Carrinho extends React.Component {
+
     handleClickCarrinho = () => {
         this.setState({ login: !this.state.login });
     };
