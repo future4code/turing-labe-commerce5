@@ -120,8 +120,8 @@ class App extends React.Component {
   render() {
     const renderiza = this.state.login ? <AppCarrinho /> : <Home />;
     return <TelaInicial>{renderiza}
-      <Car>
-        <Imagem onClick={this.handleClickCarrinho} src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
+      <Car onClick={this.handleClickCarrinho}>
+        <Imagem src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
       </Car>
       </TelaInicial>
   };
