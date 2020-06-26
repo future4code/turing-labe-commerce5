@@ -47,7 +47,7 @@ class App extends React.Component{
         }
       };
   
-      return <App>{renderiza()}</App>;
+      return <Home>{renderiza()}</Home>;
     }
   }
 export default App
