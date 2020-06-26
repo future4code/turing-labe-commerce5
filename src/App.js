@@ -111,14 +111,14 @@ height: 45%;
 
 class App extends React.Component {
   state = {
-    login: false
+    Compras: false
   };
 
   handleClickCarrinho = () => {
-    this.setState({ login: !this.state.login });
+    this.setState({ Compras: !this.state.Compras });
 };
   render() {
-    const renderiza = this.state.login ? <AppCarrinho /> : <Home />;
+    const renderiza = this.state.Compras ? <AppCarrinho /> : <Home />;
     return <TelaInicial>{renderiza}
       <Car onClick={this.handleClickCarrinho}>
         <Imagem src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
