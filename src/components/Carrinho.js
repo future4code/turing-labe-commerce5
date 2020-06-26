@@ -23,13 +23,19 @@ const Imagem = styled.img`
 width: 50%;
 height: 45%;
 `
+
+
 class Carrinho extends React.Component {
-       render(){
-        return(
-            <Car onClick={this.handleClickCarrinho}>
-                <Imagem src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png"/>
+
+    handleClickCarrinho = () => {
+        this.setState({ login: !this.state.login });
+    };
+    render() {
+        return (
+            <Car>
+                <Imagem onClick={this.handleClickCarrinho} src="https://cdn.discordapp.com/attachments/725392849348198411/725715711267307570/sacola.png" />
             </Car>
         )
-}
+    }
 }
 export default Carrinho
