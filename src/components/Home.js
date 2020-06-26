@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import Carrinho from "./Carrinho";
 import styled from "styled-components";
 
+
 const Div = styled.div`
  font-family: sans-serif;
 `;

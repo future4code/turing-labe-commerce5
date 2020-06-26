@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import Carrinho from "./Carrinho";
 import styled from "styled-components";
 
+
 const Div = styled.div`
  font-family: sans-serif;
 `;
@@ -24,21 +25,27 @@ padding: 10px;
 const Nav = styled.nav`
 border: 2px solid #021729;
 `;
+const Carrrrrr = styled.div`
+grid-column: 3/5;
+border: 2px solid #00012a;
+margin-left: 20px;
+`;
 
 
-export default function App() {
-  return (
-    <Div>
-      <TelaInteira>
-        <Header />
-
-        <Main>
-          <Nav>
-              <Filtro />
-          </Nav>
-
-          <section class="painel-de-videos">
-          <Produtos
+class AppCarrinho extends React.Component {
+  render(){
+    return (
+      <Div>
+        <TelaInteira>
+          <Header />
+  
+          <Main>
+            <Nav>
+                <Filtro />
+            </Nav>
+  
+            <section class="painel-de-videos">
+            <Produtos
              url={"https://cdn.discordapp.com/attachments/725392849348198411/726113358637564007/001.jpg"}
              nomeDoProduto={"Foguete Atlas V"}
              valorProduto={"R$ 40.50"}
@@ -78,11 +85,17 @@ export default function App() {
              nomeDoProduto={"Foguete Athena"}
              valorProduto={"R$ 655.99"}
             />
-          </section>
-        </Main>
-        <Carrinho/>
-      </TelaInteira>
-    </Div>
-  );
-}
-
+            </section>
+            <Carrrrrr>
+              <h1>Carrinho</h1>
+            </Carrrrrr>
+          </Main>
+          <Carrinho/>
+        </TelaInteira>
+      </Div>
+    );
+  }
+  
+  }
+  export default AppCarrinho
+  
