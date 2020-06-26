@@ -12,10 +12,14 @@ box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -3px 6px 0 rgba(0,0,
 font-size: 16px;
 `
 const Titulo = styled.h4`
- margin-left: 20px;
- color: #170229;
+margin-left: 20px;
+color: #170229;
 `
-class CardVideo extends React.Component {
+const Preco = styled.h4`
+margin-left: 20px;
+color: #170229;
+`
+class Produtos extends React.Component {
   reproduzVideo = () => {
     console.log("Vídeo está sendo reproduzido");
 };
@@ -26,10 +30,11 @@ class CardVideo extends React.Component {
     return (
       <div className="box-pagina-principal" onclick="reproduzVideo()">
         <img src={this.props.url} alt="" />
-        <Titulo>{this.props.tituloDoVideo}</Titulo>
+        <Titulo>{this.props.nomeDoProduto}</Titulo>
+        <Preco>{this.props.valorProduto}</Preco>
         <Botao onClick={this.reproduzVideo}>Adicionar ao Carrinho</Botao>
       </div>
     );
   }
 }
-export default CardVideo
+export default Produtos
